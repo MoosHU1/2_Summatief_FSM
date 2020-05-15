@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class RunDobbelFSM {
+public class CreateDobbelFSM {
 
-    public static void RunDobbel(){
+    public static ArrayList<String> RunDobbel(){
 
         Node s0 = new Node("s0");
         Node s1 = new Node("s1");
@@ -58,7 +58,7 @@ public class RunDobbelFSM {
         connecties.put(s6,next6);
 
         DobbelFSM montecarlo = new DobbelFSM();
-        System.out.println(montecarlo.run(s0, connecties));
+        return (montecarlo.run(s0, connecties));
 
 
     }

@@ -17,7 +17,7 @@ public class TekstFSM {
     public ArrayList<String> run(String input) {
         ArrayList<String> goneThrough = new ArrayList<String>();
         goneThrough.add(currentNode.getNaam());
-        System.out.println(goneThrough);
+
         for (int index = 0; index < input.length(); index++) {
             char letter = input.charAt(index);
             if (letter == 'A') {
@@ -34,6 +34,7 @@ public class TekstFSM {
                 currentNode = currentNode.getNodeB();
             }
             goneThrough.add(currentNode.getNaam());
+
 
 
 

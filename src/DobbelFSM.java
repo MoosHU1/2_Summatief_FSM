@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -9,8 +10,9 @@ public class DobbelFSM {
 
     }
 
-    public String run (Node currentNode, HashMap<Node, List<Node>> con) {
-        System.out.println(currentNode.getNaam());
+    public ArrayList<String> run (Node currentNode, HashMap<Node, List<Node>> con) {
+        ArrayList<String> goneThrough = new ArrayList<String>();
+        goneThrough.add(currentNode.getNaam());
         while (1==1) {
 
             List<Node> potentialNext = con.get(currentNode);
@@ -20,10 +22,12 @@ public class DobbelFSM {
             Node nextNode = potentialNext.get(index);
             //Als de huidige staat begint met dobbel is er een uitkomst, deze wordt geprint en de fsm stopt
             if ((potentialNext.get(index).getNaam()).matches("dobbel(.*)")) {
-                return nextNode.getNaam();
+                goneThrough.add(nextNode.getNaam());
+                return goneThrough;
+                //return (goneThrough + " " +nextNode.getNaam());
 
             }
-            System.out.println(nextNode.getNaam());
+            goneThrough.add(nextNode.getNaam());
             currentNode = nextNode;
 
 

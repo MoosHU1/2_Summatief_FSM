@@ -8,12 +8,13 @@ public class Main {
     public static void main(String[] args){
 
 
-
+        //Tekst
         TekstFSM TekstFSM1 = CreateTekstFSM.createTekstFSM();
         String input = "BAAB";
-
         System.out.println(TekstFSM1.run(input));
-        RunDobbelFSM.RunDobbel();
+
+        //Dobbel
+        System.out.println((CreateDobbelFSM.RunDobbel()));
 
 
 

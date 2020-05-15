@@ -12,8 +12,8 @@ public class CreateTekstFSM {
         ts0.setNodeA(ts2);
         ts0.setNodeB(ts1);
 
-        ts2.setNodeB(ts2);
-        ts2.setNodeA(ts1);
+        ts1.setNodeA(ts1);
+        ts1.setNodeB(ts2);
 
         ts2.setNodeB(ts3);
 
