@@ -20,6 +20,7 @@ public class TekstFSM {
 
         for (int index = 0; index < input.length(); index++) {
             char letter = input.charAt(index);
+
             if (letter == 'A') {
                 if (currentNode.getNodeA() == null){
                     return goneThrough;
